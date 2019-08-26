@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /security-cas
+
+
+insurance:
+  # 本项目对外的访问地址 /login/cas固定后缀
+  serviceUrl: http://localhost:8080/security-cas/login/cas
+  # ticket validator url
+  casUrlPrefix: https://localhost/sso
+  # cas login url
+  casLoginUrl: https://localhost/sso/login
+  # cas logout url
+  casLogoutUrl: https://localhost/sso/logout
+
+spring:
+  thymeleaf:
+    cache: false
+
+logging:
+  file: logs/info.log
+
